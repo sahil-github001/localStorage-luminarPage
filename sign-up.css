@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.container {
+    width: 70%;
+    height: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    transition: 1s;
+    border-radius: .6rem;
+}
+
+.container:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.left-sec {
+    flex: 57%;
+}
+
+.right-sec {
+    flex: 43%;
+    background-image: url("./images/sign-up.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+
+
+
+
+img {
+    display: block;
+    margin: 1rem auto;
+    border-radius: .4rem;
+}
+
+
+
+input {
+    display: block;
+    margin: 1rem auto;
+    padding: .4rem;
+    width: 75%;
+    border-radius: .2rem;
+    border: none;
+    outline: none;
+    height: 3rem;
+    background-color: #eadede;
+}
+
+input::placeholder {
+    color: rgb(70, 66, 66);
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 75%;
+    padding: .4rem;
+    border-radius: .2rem;
+    border: none;
+    color: white;
+    background-color: #6d1d8e;
+    font-weight: bold;
+    height: 3rem;
+    transition: .5s;
+    font-size: 1.3rem;
+
+}
+
+h1 {
+    color: #6d1d8e;
+    font-size: 1.8rem;
+    width: 90%;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #9e2acf;
+    width: 76%;
+}
+
+.ask {
+    margin: 1rem 0;
+}
+
+p {
+    display: inline;
+    font-size: .8rem;
+    color: rgb(49, 47, 47);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media(max-width:1050px) {
+    .right-sec {
+        display: none;
+    }
+
+    .left-sec {
+        height: fit-content;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    body {
+        width: 100%;
+        height: min-content;
+        padding-top: 4rem;
+    }
+}
+
+@media(max-width:576px) {
+    .container {
+        width: 90%;
+    }
+
+    html {
+        font-size: 14px;
+    }
+}
